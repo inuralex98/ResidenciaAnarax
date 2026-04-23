@@ -1,0 +1,501 @@
+/* =================== RESET BÁSICO =================== */
+html {
+  min-height: 100%;
+}
+
+body{
+  margin: 0;
+  font-size: 0.85rem; /* Reducir todo el texto para no usar transform: scale */
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Para que el footer se quede abajo */
+  margin-bottom: 0px;
+}
+
+main{
+  flex: 1; /* Para que el contenido de la página empuje el footer hacia abajo */
+}
+
+/* =================== ENCABEZADO =================== */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  text-align: center;
+  background: linear-gradient(to bottom, #ffffff, #66d8d8);
+}
+
+header h1 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* =================== CONTENEDORES GENERALES =================== */
+.contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  padding: 15px 40px;
+  margin: 20px auto;
+}
+
+.contenedor img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* =================== BLOQUE DE TEXTO =================== */
+.textoestilo {
+  padding: 25px;
+  margin-left: 15px;
+  background: #d6f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  line-height: 1.6;
+}
+
+.textoestilo h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #006b6b;
+  margin-bottom: 15px;
+}
+
+.textoestilo h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #006b6b;
+  margin: 15px 0 8px;
+}
+
+.textoestilo p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.segundotexto {
+  margin-top: 20px;
+  background: #d6f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  padding: 20px;
+}
+
+.instalaciones h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #006b6b;
+  margin: 15px 0 8px;
+}
+
+/* =================== MENÚ PRINCIPAL =================== */
+.menu-columnas {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 15px;
+}
+
+/* Columnas del menú */
+.menu-columnas .columna {
+  position: relative;
+}
+
+/* Enlaces principales */
+.menu-columnas .columna > a {
+  display: block;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  box-shadow: 0 4px 8px #66d8d8;
+  transition: background-color 0.3s;
+}
+
+.menu-columnas .columna > a:hover {
+  background-color: #66d8d8;
+  border-radius: 6px;
+}
+
+/* =================== SUBMENÚ =================== */
+.menu-columnas .columna ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  min-width: 200px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px #66d8d8;
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 100;
+}
+
+.menu-columnas .columna ul li a {
+  display: block;
+  padding: 0.6rem 1rem;
+  color: #000;
+  text-decoration: none;
+}
+
+.menu-columnas .columna ul li a:hover {
+  background-color: #66d8d8;
+}
+
+.menu-columnas .columna:hover ul {
+  display: block;
+}
+
+/* =================== FORMULARIO =================== */
+form {
+  width: 400px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+label {
+  display: inline-block;
+  vertical-align: top;
+  width: 180px;
+  margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+  width: 100%; /* Hace que los campos ocupen todo el ancho del formulario */
+  padding: 2px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  height: 100px;
+  vertical-align: top;
+}
+
+.buttons {
+  margin-top: 15px;
+}
+
+.fila-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fila-check input {
+  width: auto; /* importante para que no ocupe todo */
+}
+
+.fila-check label {
+  width: auto;
+  margin: 0;
+}
+
+/* =================== IMÁGENES Y COLLAGES =================== */
+.collage {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.collage img {
+  width: 100%;
+  max-width: 950px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* =================== SECCIÓN SERVICIOS =================== */
+.servicios {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 30px;
+  margin: 40px;
+}
+
+.servicios .textoestilo {
+  flex: 1; /* ocupa el espacio disponible */
+}
+
+.fotos-servicios {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    flex-shrink: 0;
+    width: 420px;
+}
+
+.fotos-servicios img {
+    width: calc(50%-10px); /* Dos columnas */
+    height: 160px;       /* altura fija igual para ambas */
+    object-fit: cover;   /* recorta sin deformar */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* =================== CONTACTO =================== */
+.contacto-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1300px;   /* limita el ancho */
+  margin: 60px auto;   /* centra el bloque en la página */
+}
+
+
+.contacto-mapa {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex: 1;
+}
+
+.contacto-mapa img {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.contacto-info {
+  flex: 1;
+  max-width: 550px;
+  font-size: 17px;
+}
+
+.footer {
+  display: flex;
+  position: relative;
+  margin-top: auto;
+  width: 100%;
+  height: 40px;
+  align-items: center;
+  background: linear-gradient(to top, #ffffff, #66d8d8);
+}
+
+.footer-left {
+  flex: 1;
+}
+
+.footer-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.footer-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Texto general */
+.footer p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #000;
+  margin: 0;
+}
+
+/* Redes sociales */
+
+.footer-right img {
+  width: 35px;
+  height: 35px;
+}
+
+.footer-right a:hover {
+  transform: scale(1.2);
+}
+
+.instalaciones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 40px; /* espacio entre tarjetas */
+    padding: 40px 80px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.card img {
+    width: 100%; /* Para que la imagen se desborde */
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+    color: #2c7f7a;
+}
+
+.card p {
+    padding: 0 15px 20px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* =================== MÓVIL =================== */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  header {
+    height: auto;
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+
+  #logo {
+    width: 50px;
+  }
+
+  /* MENÚ */
+  .menu-columnas {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 10px;
+  }
+
+  .menu-columnas .columna > a {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  .menu-columnas .columna ul {
+    font-size: 13px;
+    min-width: 150px;
+  }
+
+  /* CONTENEDOR INICIO */
+  .contenedor {
+    flex-direction: column;
+    padding: 15px;
+    margin: 10px auto;
+  }
+
+  .contenedor img {
+    width: 100%;
+  }
+
+  .textoestilo {
+    margin-left: 0;
+  }
+
+  /* FORMULARIO */
+  form {
+    width: 90%;
+    padding: 15px;
+  }
+
+  label {
+    width: 100%;
+    display: block;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+  }
+
+  /* SERVICIOS */
+  .servicios {
+    flex-direction: column;
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .fotos-servicios {
+    width: 100%;
+  }
+
+  .fotos-servicios img {
+    width: calc(50% - 10px);
+  }
+
+  /* GALERÍA */
+  .instalaciones {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    gap: 20px;
+  }
+
+  /* CONTACTO */
+  .contacto-contenedor {
+    flex-direction: column;
+    margin: 20px;
+    gap: 20px;
+  }
+
+  .contacto-info {
+    max-width: 100%;
+  }
+
+  /* FOOTER */
+  .footer {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 10px;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .footer-center {
+    position: static;
+    transform: none;
+  }
+
+  .footer-right {
+    justify-content: center;
+  }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 480px) {
+  .instalaciones {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-columnas .columna > a {
+    font-size: 12px;
+  }
+}
